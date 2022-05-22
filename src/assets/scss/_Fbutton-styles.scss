@@ -1,0 +1,147 @@
+@import "./variables";
+
+.f-btn-wrap {
+  display: flex;
+  align-items: center;
+  .f-btn-info {
+    background: #33343b;
+    border-radius: $borderRadiusBase 0 0 $borderRadiusBase;
+    padding: 0.25rem 1rem;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    .f-truncate-text {
+      line-height: 1;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.f-btn,
+.btn {
+  border-width: 2px;
+  border-width: 1px;
+  padding: 0.25rem 1rem;
+  border-style: solid;
+  border-color: $themePrimaryColor;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  border-radius: $borderRadiusBase;
+  &:hover {
+    background-color: $themeSecondaryColor;
+    border-color: $themeSecondaryColor;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: $themePrimaryColor;
+  }
+  &:disabled {
+    opacity: 0.75;
+    pointer-events: none;
+  }
+  .f-btn-icon {
+    font-size: 1.15rem;
+    &.f-prefix {
+      margin-right: 0.35rem;
+    }
+    &.f-postfix {
+      margin-left: 0.35rem;
+    }
+    svg {
+      display: inline-flex;
+      vertical-align: -3px;
+    }
+  }
+  &.f-btn-primary {
+    color: #fff;
+    background-color: $themePrimaryColor;
+    border-color: #cba461;
+  }
+  &.f-btn-secondary {
+    color: $themePrimaryColor;
+    background-color: #ffffff;
+    border-color: #ffffff;
+  }
+  &.f-btn-futuristic-primary {
+    position: relative;
+    background: url(../images/btn-futuristic-primary.svg) center center no-repeat;
+    background-size: 95%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: white;
+    .f-btn-title {
+      padding: 1rem 1.5rem;
+      font-size: 1.025rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    &:before {
+      background: url(../images/btn-border-futuristic-primary.svg) left center no-repeat;
+      background-size: contain;
+      bottom: 0;
+      left: 0;
+    }
+    &:after {
+      background: url(../images/btn-border-futuristic-primary.svg) left center no-repeat;
+      background-size: contain;
+      top: 0;
+      right: 0;
+      transform: rotate(-180deg);
+    }
+  }
+  &.f-btn-futuristic-secondary {
+    position: relative;
+    background: url(../images/btn-futuristic-secondary.svg) center center no-repeat;
+    background-size: 95%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: white;
+    .f-btn-title {
+      padding: 1rem 1.5rem;
+      font-size: 1.025rem;
+    }
+    &:before,
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    &:before {
+      background: url(../images/btn-border-futuristic-secondary.svg) left center no-repeat;
+      background-size: contain;
+      bottom: 0;
+      left: 0;
+    }
+    &:after {
+      background: url(../images/btn-border-futuristic-secondary.svg) left center no-repeat;
+      background-size: contain;
+      top: 0;
+      right: 0;
+      transform: rotate(-180deg);
+    }
+  }
+  &.f-btn-outlined {
+    background: none !important;
+    &.f-btn-primary {
+      color: $themePrimaryColor;
+    }
+    &.f-btn-secondary {
+      color: #ffffff;
+    }
+  }
+  &.f-btn-rounded {
+    border-radius: 100px !important;
+  }
+}
